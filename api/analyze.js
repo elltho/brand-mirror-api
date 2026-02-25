@@ -74,8 +74,13 @@ Write in English. Make it feel "spot on" and screenshot-friendly.
           { role: "system", content: system },
           { role: "user", content: user }
         ],
-        text: { format: { type: "json_schema", json_schema: schema } }
-      })
+text: {
+  format: {
+    type: "json_schema",
+    name: "brand_mirror_report",
+    schema: schema
+  }
+}      })
     });
 
     if (!r.ok) {
