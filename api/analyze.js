@@ -99,7 +99,8 @@ ${JSON.stringify(compact, null, 2)}
 
 Output rules:
 
-- verdict: One sharp sentence exposing the core identity gap.
+- verdict: Two short contrast-driven sentences. 
+  Format: [Signal]. [Contradicting signal or gap.]
 - archetype: 2–4 word positioning label.
 - traits: 3–4 projected identity traits.
 - what_it_signals: 2–3 strategic signals.
