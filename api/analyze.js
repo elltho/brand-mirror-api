@@ -32,23 +32,35 @@ export default async function handler(req, res) {
     };
 
     const system = `
-You are Brand Mirror — a meme-ready brand psychologist with a slight roast instinct.
+You are Brand Mirror.
 
-Your job is NOT to describe the website.
-Your job is to decode what it signals about identity, taste, status, insecurity, and aspiration — for BOTH the brand and the customer persona.
+Your job is to decode what a homepage signals in the first 10 seconds —
+about identity, positioning, risk posture, and conversion friction.
+
+This is NOT a UX audit.
+This is NOT generic brand feedback.
+
+This is identity signal analysis.
+
+You analyze:
+- Status signaling (premium vs practical vs safe)
+- Risk posture (bold vs cautious)
+- Social proof framing
+- Offer urgency
+- Category conformity vs differentiation
+- Emotional positioning
 
 Tone:
-- witty, sharp, slightly provocative
-- never cruel, never insulting, no profanity
-- screenshot-ready and tweet-ready
+- Sharp, intelligent, slightly sassy
+- Growth marketer energy
+- Never cruel, no profanity
+- No generic filler words (modern, clean, professional, etc.)
+- Always tie claims directly to provided signals
 
-Rules:
-- NO generic adjectives ("modern", "clean", "professional", "premium") unless tied to a signal.
-- Always connect signals → meaning (headline/CTA/trust/offer/popup).
-- If signals are weak, say what's missing (briefly).
-- Keep it SHORT. Make it punchy. Overwriting kills virality.
+Most important:
+Surface hidden positioning gaps and subtle conversion friction.
 
-Output must be valid JSON that matches the schema.
+Output must be short, punchy, and strategically useful.
 `;
 
     // Hard caps to prevent “essay mode”
@@ -60,7 +72,7 @@ Output must be valid JSON that matches the schema.
         archetype: { type: "string" },               // 2–4 words
         traits: { type: "array", items: { type: "string" }, maxItems: 4 },
         what_it_signals: { type: "array", items: { type: "string" }, maxItems: 3 },
-        what_it_implies: { type: "array", items: { type: "string" }, maxItems: 2 },
+        conversion_risk: { type: "array", items: { type: "string" }, maxItems: 2 },
         fastest_wins: { type: "array", items: { type: "string" }, maxItems: 2 },
         evidence: { type: "array", items: { type: "string" }, maxItems: 3 },
         share_line: { type: "string" }              // <= 140 chars
@@ -70,25 +82,33 @@ Output must be valid JSON that matches the schema.
         "archetype",
         "traits",
         "what_it_signals",
-        "what_it_implies",
+        "conversion_risk",
         "fastest_wins",
         "evidence",
         "share_line"
       ]
     };
 
-    const user = `
-Signals:
+   const user = `
+Signals detected from homepage:
 ${JSON.stringify(compact, null, 2)}
 
-Output rules (STRICT):
-- verdict: ONE sentence, bold and meme-ready.
-- archetype: 2–4 words, label-worthy.
-- Every list item: MAX 12 words.
-- evidence: must cite real signals (headline / CTA text / trust snippet / popup type / offer).
-- share_line: tweet-ready, <= 140 characters.
-- Slight roast is allowed (brand + customer persona), but keep it playful.
-- If you need to guess, say what signal is missing instead of inventing.
+Strict output rules:
+
+- verdict: ONE sharp sentence explaining what the homepage signals.
+- archetype: 2–4 word positioning label.
+- traits: 3–4 identity traits being projected.
+- what_it_signals: 2–3 deeper psychological signals.
+- what_it_implies: 1–2 potential conversion frictions or positioning risks.
+- fastest_wins: 1–2 strategic adjustments (not cosmetic tweaks).
+- evidence: must cite real signals (headline, CTA text, trust snippets, popups, offers).
+- share_line: short, screenshot-ready line (<140 characters).
+
+Constraints:
+- Each list item max 12 words.
+- No generic praise.
+- If positioning is unclear, say that directly.
+- Slight sass is encouraged, but stay professional.
 `;
 
     const r = await fetch("https://api.openai.com/v1/responses", {
