@@ -65,6 +65,19 @@ Avoid:
 
 Focus on exposing identity gaps clearly.
 Make it feel like a growth strategist calling out tension in a meeting.
+Avoid corporate phrasing such as:
+- indicates
+- suggests
+- demonstrates
+- aims to
+- appears to
+- highlights
+- leverages
+- aligns with
+
+Use direct, human language instead.
+Short sentences.
+Clear contrast.
 `;
 
     // Hard caps to prevent “essay mode”
@@ -99,8 +112,12 @@ ${JSON.stringify(compact, null, 2)}
 
 Output rules:
 
-- verdict: Two short contrast-driven sentences. 
-  Format: [Signal]. [Contradicting signal or gap.]
+- verdict: Two short, contrast-driven sentences.
+  Format: [Primary signal]. [Undermining contradiction.]
+  Each sentence under 12 words.
+  No corporate language.
+  No filler words.
+  No “yet”, “however”, or “indicates”.
 - archetype: 2–4 word positioning label.
 - traits: 3–4 projected identity traits.
 - what_it_signals: 2–3 strategic signals.
