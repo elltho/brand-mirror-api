@@ -63,6 +63,7 @@ Make it feel like:
 
 Always tie conclusions to actual signals.
 Keep it short. Keep it sharp. Keep it screenshot-worthy.
+Prioritize clarity over cleverness. If a sharper phrasing exists, use it.
 `;
 
     // Hard caps to prevent “essay mode”
@@ -110,7 +111,7 @@ Constraints:
 - Each list item max 12 words.
 - Avoid safe corporate language.
 - If the brand plays it safe, call that out.
-- Slight ego tension is encouraged.
+- Expose the positioning gap directly. Do not soften it with poetic language.
 - Do not soften the take.
 `;
 
