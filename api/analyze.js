@@ -105,23 +105,28 @@ ${JSON.stringify(compact, null, 2)}
 Return JSON that matches the schema exactly.
 
 Output rules (strict):
-- verdict: ONE punchy contrast statement. Maximum 16 words.
-  MUST follow one of these structures:
+- verdict: ONE punchy contrast statement. Maximum 14 words.
+  MUST follow this format exactly:
 
-  1. “X energy. Y execution.”
-  2. “You want X. You ship Y.”
-  3. “Big X. Small Y.”
-  4. “Premium X. Discount Y.”
-  5. “Loud X. Quiet Y.”
-  6. “X ambition. Y behavior.”
+  “Phrase A. Phrase B.”
 
   Rules:
+  - Each phrase 2–6 words.
+  - Both phrases must be grammatically complete fragments.
+  - Capitalize both phrases.
   - No commas.
-  - No filler words.
-  - No explanations.
-  - No adjectives like "clear", "strong", "solid".
-  - Must expose identity tension.
-  - Must feel screenshot-worthy.
+  - No conjunctions (no “and”, “but”, “yet”).
+  - No abstract fluff words like “ambition” unless grounded in signals.
+  - The contrast must expose a positioning tension clearly.
+
+  Bad example:
+  “Global titan ambition Quiet local confusion”
+
+  Good examples:
+  “Global icon. Confused homepage.”
+  “Premium pricing. Explanation required.”
+  “Luxury aura. Department store navigation.”
+  “Youthful edge. Safe execution.”
 
 Hard constraints:
 - No generic praise (“clean/modern/professional”).
