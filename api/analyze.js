@@ -105,33 +105,35 @@ ${JSON.stringify(compact, null, 2)}
 Return JSON that matches the schema exactly.
 
 Output rules (strict):
-- verdict: ONE punchy contrast statement. Maximum 14 words.
-  MUST follow this format exactly:
+- verdict: ONE sharp two-sentence contrast.
 
-  “Phrase A. Phrase B.”
+  Structure must be:
+  Sentence 1: What the brand wants to be.
+  Sentence 2: What the homepage actually signals.
 
   Rules:
-  - Each phrase 2–6 words.
-  - Both phrases must be grammatically complete fragments.
-  - Capitalize both phrases.
+  - Max 18 words total.
+  - Two sentences only.
   - No commas.
-  - No conjunctions (no “and”, “but”, “yet”).
-  - No abstract fluff words like “ambition” unless grounded in signals.
-  - The contrast must expose a positioning tension clearly.
+  - No conjunctions like "but", "yet", "however".
+  - Natural spoken English.
+  - Concrete language.
+  - Expose identity gap clearly.
 
-  Bad example:
-  “Global titan ambition Quiet local confusion”
+  It must feel like:
+  "You want X. You're signaling Y."
 
   Good examples:
-  “Global icon. Confused homepage.”
-  “Premium pricing. Explanation required.”
-  “Luxury aura. Department store navigation.”
-  “Youthful edge. Safe execution.”
+  "Global icon. Confused homepage."
+  "Luxury authority. Discount behavior."
+  "Youthful edge. Safe execution."
+  "Premium pricing. Explanation required."
+  "Enterprise ambition. Mid-market confidence."
 
-Hard constraints:
-- No generic praise (“clean/modern/professional”).
-- No diagnosing intent without evidence (don’t say “insecure” unless signals justify it).
-- If signals are missing, say what’s missing in conversion_risk or evidence.
+  Bad examples:
+  "Global titan ambition Quiet local confusion."
+  "Strong brand identity but unclear messaging."
+  "Clear promotional strategy with limited narrative depth."
 `;
 
     const r = await fetch("https://api.openai.com/v1/responses", {
