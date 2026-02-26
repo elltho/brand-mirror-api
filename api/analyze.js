@@ -105,20 +105,19 @@ ${JSON.stringify(compact, null, 2)}
 Return JSON that matches the schema exactly.
 
 Output rules (strict):
-- verdict: ONE sharp two-sentence contrast.
+- verdict: ONE contrast statement in two short sentences.
 
-  Structure must be:
-  Sentence 1: What the brand wants to be.
-  Sentence 2: What the homepage actually signals.
+  Sentence 1: State the brand’s desired identity in vivid language.
+  Sentence 2: Expose how the homepage undercuts it.
 
   Rules:
-  - Max 18 words total.
-  - Two sentences only.
-  - No commas.
-  - No conjunctions like "but", "yet", "however".
+  - Max 20 words.
+  - Two sentences.
   - Natural spoken English.
-  - Concrete language.
-  - Expose identity gap clearly.
+  - Slightly dramatic.
+  - No corporate language.
+  - No abstract fluff.
+  - Must feel like an insider roast, not an outsider attack.
 
   It must feel like:
   "You want X. You're signaling Y."
