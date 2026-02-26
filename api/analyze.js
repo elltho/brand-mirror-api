@@ -105,15 +105,23 @@ ${JSON.stringify(compact, null, 2)}
 Return JSON that matches the schema exactly.
 
 Output rules (strict):
-- verdict: 1 sentence, contrast-driven, slightly witty, not mean. (<= 18 words)
-  Prefer the pattern: “X energy, Y execution.” or “You want X, but you ship Y.”
-- archetype: 2–4 words, label-worthy, not generic. (No “Retailer/Brand/Company”)
-- traits: 3–4 short traits (<= 12 words each)
-- what_it_signals: 2–3 psychological signals about identity/status/risk (<= 12 words each)
-- conversion_risk: 1–2 risks phrased like a growth marketer (<= 12 words each)
-- fastest_wins: 1–2 strategic moves (not cosmetic), action-oriented (<= 12 words each)
-- evidence: 2–3 bullets quoting/pointing to actual signals found (headline/CTA/trust/offer/popup counts etc.)
-- share_line: tweet-ready, witty with charm (<140 chars). No hashtags.
+- verdict: ONE punchy contrast statement. Maximum 16 words.
+  MUST follow one of these structures:
+
+  1. “X energy. Y execution.”
+  2. “You want X. You ship Y.”
+  3. “Big X. Small Y.”
+  4. “Premium X. Discount Y.”
+  5. “Loud X. Quiet Y.”
+  6. “X ambition. Y behavior.”
+
+  Rules:
+  - No commas.
+  - No filler words.
+  - No explanations.
+  - No adjectives like "clear", "strong", "solid".
+  - Must expose identity tension.
+  - Must feel screenshot-worthy.
 
 Hard constraints:
 - No generic praise (“clean/modern/professional”).
